@@ -1,0 +1,54 @@
+.page-shell {
+  background:
+    radial-gradient(circle at top left, rgba(170, 123, 96, 0.12), transparent 20%),
+    radial-gradient(circle at bottom right, rgba(31, 42, 40, 0.08), transparent 25%),
+    #f5efe7;
+}
+
+.display-serif {
+  font-family: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+}
+
+.glass-panel {
+  background: rgba(255, 252, 248, 0.86);
+  border: 1px solid rgba(126, 102, 81, 0.16);
+  box-shadow: 0 30px 70px rgba(40, 29, 23, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.score-ring {
+  position: relative;
+  background: conic-gradient(#b56745 0 92%, rgba(110, 96, 87, 0.12) 92% 100%);
+}
+
+.score-ring::before {
+  content: '';
+  position: absolute;
+  inset: 14px;
+  border-radius: 9999px;
+  background: rgba(255, 253, 249, 0.96);
+  border: 1px solid rgba(137, 113, 96, 0.18);
+}
+
+.score-ring > * {
+  position: relative;
+  z-index: 1;
+}
+
+.upload-dropzone {
+  position: relative;
+  overflow: hidden;
+}
+
+.upload-dropzone::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.16) 50%, transparent 100%);
+  transform: translateX(-100%);
+  transition: transform 0.75s ease;
+}
+
+.upload-dropzone:hover::after {
+  transform: translateX(100%);
+}
